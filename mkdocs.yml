@@ -37,7 +37,7 @@ theme:
     #- navigation.sections # navigation on left side will be open
     - navigation.expand # It will  automaticaly open(expand) left side navigation with sub sections but close sections
     - navigation.path
-    - toc.follow # table of contents will follow the page
+    - toc.follow # table of contents will follow the page 
     - navigation.top # ?
 
     - search.suggest
