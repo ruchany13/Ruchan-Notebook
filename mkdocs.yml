@@ -1,0 +1,90 @@
+site_name: Ruchan's Notebook
+site_url: http://localhost:8000/
+
+theme:
+  name: material
+
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+
+  features:
+    - navigation.instant
+    - navigation.instant.preview
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.tabs.sticky
+    #- navigation.sections # navigation on left side will be open
+    - navigation.expand # It will  automaticaly open(expand) left side navigation with sub sections but close sections
+    - navigation.path
+    - toc.follow # table of contents will follow the page
+    - navigation.top # ?
+
+    - search.suggest
+    - search.highlight
+
+    - content.code.copy
+    - content.code.select
+
+    - content.tabs.link
+
+plugins:
+  - search
+  - blog
+
+# This used for color, and can name to code blocks
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed: # can write two or more code blocks in one tab
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Kubernetes:
+    - Kubernetes Learning Resources: Kubernetes/Resource.md
+    #- Networking:
+      #- KubeShark: Kubernetes/Network/kubeshark.md
+  - Docker: 
+    - Application of Nginx Load Balancer with Docker Compose : Docker/nginxlb.md
+    - Passbolt Installation With Mariadb and Docker: Docker/PassboltWithDB.md
+    #- Private Registry: Docker/registry.md
+  - Projects:
+    - Distributed Smart City Application Using Kubernetes on Edge Devices: Projects/Tubitak.md
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ruchany13
+    - icon: fontawesome/brands/github
+      link: https://github.com/ruchany13
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/ruchany13
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/ruchany13
