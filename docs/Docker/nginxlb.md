@@ -2,7 +2,7 @@
 # Application of Nginx Load Balancer with Docker Compose
 ***Hello, everyone! I want to talk about Nginx and Docker. I'll talk about creating a load balancer with Nginx on Docker. I'll write about implementation so If you have any problems with load balancer, nginx, docker etc. you can click the links under the text.***
 
-**This file in my [Github](https://github.com/ruchany13/MyDockerExamples/tree/local/NginxLB)**
+**This file in my [Github](https://github.com/ruchany13/MyDockerExamples/tree/main/Nginx-LoadBalancer)**
 
 ## Load Balancer
 
@@ -30,9 +30,9 @@
 # Implementation
 Yes, we can start writing a little bit of code, and a config file. It’ll be funny:)
  
-If you are ready, we can start. The load balancer separates requests from each server. We will create two servers for load balancing. Every server includes different index.html file so we can check the system. The name of servers app1 and app2. And we will create an Nginx file for load balancer configs. We will run on Docker with a docker-compose.yml file.
+If you are ready, we can start. The load balancer separates requests from each server. We will create two servers for load balancing. Every server includes different index.html file so we can check which app is responding. The name of servers `app1` and `app2`. And we will create an Nginx file for load balancer configuration. We will run on Docker with a `docker-compose.yml` file.
 
- File systems:
+ File system:
 ``` title="Folder Tree"
 --- NginxLB
   +-- docker-compose.yml
@@ -67,8 +67,8 @@ We'll create a config file in the nginx directory. This config file includes how
 ```yaml title="nginx/nginx.conf"
 http {
     upstream loadbalancer {
-      server 172.17.0.1:7001;
-      server 172.17.0.1:7002;
+      server app1:80;
+      server app2:80;
     }
   
     server {
@@ -82,7 +82,7 @@ http {
 
 ```
 
-We are run on the local machine, so we'll write 172.17.0.1 for the server. This IP is local IP. We'll use 7001 and 7002 ports for servers. You can change your ports or server IP. If you change the port and IP address don't forget to change in the docker-compose.yml.
+We'll create a docker network for containers in Docker Compose. In Docker, containers can found each other with `container name` like we'll use `app1 , app2` or you can give `hostname` parameter. So, `nginxserver` container can access other nginx apps with hostname and port 80 internal. It is good for production, because you don't need open any ports from application container.
 
 We'll run a website on the main server. Main server Dockerfile:
 
@@ -105,13 +105,16 @@ services:
     depends_on:
       - app1
       - app2
+    networks:
+      - LoadBalancerNet
 ```
 The services include our docker containers. The first container is main server.
-- **nginxserver** is the name of the main server. We run the website on this server.
+- **nginxserver** is the name of the main server container. We run the website on this server.
 
 - **ports** include which ports we use. Nginx exposes 80 ports for requests. We'll use port 7003 to connect 80 ports in nginx.
 
 - **depends_on** meaning this service depends on these services for running. They don't run, this service doesn't run.
+- **LoadBalancerNet** is network for communicate containers each other with container name and internal ports. 
 
 Next, we'll create our server app1 and app2.
 
@@ -150,13 +153,17 @@ Okay, we created an Html page. Which server responds to our request to write in 
     build: ./app1
     ports:
       - "7001:80"
-  
+    networks:
+      - LoadBalancerNet
+
   app2:
     build: ./app2
     ports:
       - "7002:80"
+    networks:
+      - LoadBalancerNet
 ```
-We created services for each server. We define ports in *nginx.conf* file. We use these ports.
+We created services for each server. We define ports to apps for access apps without load balancer.It isn't neceseaary for Load Balancer. Main server (Loadbalancer) use docker network interface for access app's 80 ports. Default Nginx Server ports is 80.
 
 Lastly *docker-compose.yml*:
 
@@ -171,23 +178,36 @@ services:
     depends_on:
       - app1
       - app2
+    networks:
+      - LoadBalancerNet
+
   app1:
     build: ./app1
     ports:
       - "7001:80"
-  
+    networks:
+      - LoadBalancerNet
+
   app2:
     build: ./app2
     ports:
       - "7002:80"
+    networks:
+      - LoadBalancerNet
+networks:
+  LoadBalancerNet:
 ```
 
+## Diagram of Network
+You can see how load balancer works in first client request `http://localhost:7003`. And can see how we connect directly apps with ports in other requests.
+
+![LBDiagram](../sources/DockerLBDiagram.png)
 
 ## Build and Run
 Now, the last step is building compose file and run on our localhost.
 
-You have to same directory with *docker-compose.yml*
-We will run the docker-compose file. Docker build services with Dockerfiles we created.
+You have to same directory with `docker-compose.yml`
+We will run the `docker-compose` file. Docker build services with Dockerfiles we created.
 
 This command creates, builds and runs services. That is very easy. Yes with one command!
 
