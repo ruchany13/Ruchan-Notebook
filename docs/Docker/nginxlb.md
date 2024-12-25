@@ -201,7 +201,7 @@ networks:
 ## Diagram of Network
 You can see how load balancer works in first client request `http://localhost:7003`. And can see how we connect directly apps with ports in other requests.
 
-![LBDiagram](../sources/DockerLBDiagram.png)
+![LBDiagram](../sources/DockerLBdiagram.png)
 
 ## Build and Run
 Now, the last step is building compose file and run on our localhost.
