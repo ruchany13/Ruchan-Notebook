@@ -1,3 +1,6 @@
+---
+title: Home
+---
 # 👨‍💻 Hello, I'm Ruchan! 👋
 
 As a **DevOps Engineer**, I specialize in software development, system administration, and process automation. I am passionate about making the entire journey from **"Code to Production"** seamless through innovation, collaboration, and automation. I strive to improve processes and work on continuous integration, distributed systems, and cloud infrastructure.

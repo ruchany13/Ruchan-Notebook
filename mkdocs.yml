@@ -28,6 +28,7 @@ theme:
 
 
   features:
+
     - navigation.instant
     - navigation.instant.preview
     - navigation.instant.progress
@@ -48,9 +49,15 @@ theme:
 
     - content.tabs.link
 
+    - navigation.indexes
+
 plugins:
   - search
-  - blog
+#  - blog:
+#      post_excerpt_separator: <!-- more --> # When you set this flag in post, they won't continiue
+#      archive: false
+#      blog_toc: true
+  - info
 
 # This used for color, and can name to code blocks
 markdown_extensions:
@@ -63,21 +70,33 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed: # can write two or more code blocks in one tab
       alternate_style: true
+  - admonition:
+
 
 nav:
   - Home: 
-    - About Me: about/index.md
-    - Resume/CV: about/resume.md
+    - index.md
+    - about/resume.md
+
   - Kubernetes:
     - Kubernetes Learning Resources: Kubernetes/Resource.md
     #- Networking:
       #- KubeShark: Kubernetes/Network/kubeshark.md
+
   - Docker: 
     - Application of Nginx Load Balancer with Docker Compose : Docker/nginxlb.md
     - Passbolt Installation With Mariadb and Docker: Docker/PassboltWithDB.md
     #- Private Registry: Docker/registry.md
+    
+  - Blog:
+    - Barman:
+      - blog/barman/BarmanSetupLocal.md
+      - blog/barman/BarmanPITR.md
+      - blog/barman/BarmanRecveryRemote.md
+
   - Projects:
     - Distributed Smart City Application Using Kubernetes on Edge Devices: Projects/Tubitak.md
+
 
 
 extra:

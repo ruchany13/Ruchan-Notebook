@@ -1,3 +1,7 @@
+---
+title: "Resume/CV"
+---
+
 # Ruchan Yalçın
 
 **📍 Istanbul, Turkey**   
