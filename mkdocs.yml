@@ -65,7 +65,9 @@ markdown_extensions:
       alternate_style: true
 
 nav:
-  - Home: index.md
+  - Home: 
+    - About Me: about/index.md
+    - Resume/CV: about/resume.md
   - Kubernetes:
     - Kubernetes Learning Resources: Kubernetes/Resource.md
     #- Networking:
