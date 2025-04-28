@@ -53,11 +53,6 @@ theme:
 
 plugins:
   - search
-#  - blog:
-#      post_excerpt_separator: <!-- more --> # When you set this flag in post, they won't continiue
-#      archive: false
-#      blog_toc: true
-  - info
 
 # This used for color, and can name to code blocks
 markdown_extensions:
@@ -87,7 +82,7 @@ nav:
     - Application of Nginx Load Balancer with Docker Compose : Docker/nginxlb.md
     - Passbolt Installation With Mariadb and Docker: Docker/PassboltWithDB.md
     #- Private Registry: Docker/registry.md
-    
+
   - Blog:
     - Barman:
       - blog/barman/BarmanSetupLocal.md
