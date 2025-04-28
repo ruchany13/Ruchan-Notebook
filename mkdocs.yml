@@ -81,7 +81,7 @@ nav:
   - Docker: 
     - Application of Nginx Load Balancer with Docker Compose : Docker/nginxlb.md
     - Passbolt Installation With Mariadb and Docker: Docker/PassboltWithDB.md
-    #- Private Registry: Docker/registry.md
+    - Secure Docker Registry Setup with TLS Authentication and UI: Docker/PrivateRegistry.md
 
   - Blog:
     - Barman:
