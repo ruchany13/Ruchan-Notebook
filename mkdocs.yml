@@ -74,6 +74,7 @@ nav:
     - about/resume.md
 
   - Kubernetes:
+    - Kubernetes Sealed Secret: Kubernetes/sealed-secret.md
     - Kubernetes Learning Resources: Kubernetes/Resource.md
     #- Networking:
       #- KubeShark: Kubernetes/Network/kubeshark.md
