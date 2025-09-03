@@ -53,9 +53,13 @@ theme:
 
 plugins:
   - search
+  - glightbox # for image zooming
 
 # This used for color, and can name to code blocks
 markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -74,8 +78,10 @@ nav:
     - about/resume.md
 
   - Kubernetes:
+    - Kubernetes Setup with Kuebadm: Kubernetes/Kubeadm.md
     - Kubernetes Sealed Secret: Kubernetes/sealed-secret.md
     - Kubernetes Learning Resources: Kubernetes/Resource.md
+    
     #- Networking:
       #- KubeShark: Kubernetes/Network/kubeshark.md
 
