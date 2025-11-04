@@ -76,13 +76,13 @@ A secure, self-hosted password management system was implemented using Passbolt,
 ---
 
 ## 👤 References
-- **Emre Ünal**
-  *DevOps Team Lead, Basistek*
-  📧 [emre.unal@basistek.com](mailto:emre.unal@basistek.com)
-  
 - **Burak Kayrancıoğlu**  
   *DevOps Engineer, Trendyol*  
-  📧 [bkayranci@gmail.com](mailto:bkayranci@gmail.com) 
+  📧 [bkayranci@gmail.com](mailto:bkayranci@gmail.com)
+  
+- **Emre Ünal**  
+  *DevOps Team Lead, Basistek*  
+  📧 [emre.unal@basistek.com](mailto:emre.unal@basistek.com)
 
 - **Dr. Yunus Özen**  
   *Assistant Professor, Yalova University Computer Engineering*  
