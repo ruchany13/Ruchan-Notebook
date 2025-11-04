@@ -50,7 +50,7 @@ I strive to be more than just a systems engineer: **a unifier, an automator, and
 
 ---
 
-📬 Feel free to reach out: [ruchany13@gmail.com](mailto:ruchany13@gmail.com)
+📬 Feel free to reach out: [hello@ruchan.dev](mailto:hello@ruchan.dev)
 
 ---
 
