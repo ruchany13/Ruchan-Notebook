@@ -5,18 +5,18 @@ title: "Resume/CV"
 # Ruchan Yalçın
 
 **📍 Istanbul, Turkey**   
-**Contact With Me: 📧 [ruchany13@gmail.com](mailto:ruchany13@gmail.com)**  
+**Contact With Me: 📧 [hello@ruchan.dev](mailto:hello@ruchan.dev)**  
 ---
 
 ## 🔧 Technical Qualifications
 
-- **Programming Languages**: Python, Shell Scripting, Go, C, C#
+- **Programming Languages**: Python, Go, Shell Scripting, C#
 - **Database Technologies**: PostgreSQL, Redis, MongoDB, InfluxDB
-- **Storage and Backup Systems**: Portworx, Barman, Velero, Longhorn
+- **Storage and Backup Systems**: Barman, Velero, Longhorn, Rook
 - **Operating Systems**: Linux (Arch, CentOS, Kali, Raspbian)
 - **Network Tools**: Wireshark, tcpdump, nmap, netcat
 - **IoT Platforms**: Raspberry Pi, Arduino
-- **Cloud Systems and Tools**: AWS, Kubernetes, GitLabCI/Jenkins, Docker, Terraform, Ansible, Git, Harbor, Rancher
+- **Cloud Systems and Tools**: AWS, Kubernetes(Vanilla, k3s, Rancher), Docker, Github CI, Terraform, Ansible, Git, Harbor
 - **Monitoring Tools**: Grafana, Prometheus, EFK
 - **Web Technologies**: Nginx, Django
 - **Languages**: English (B2)
@@ -25,8 +25,8 @@ title: "Resume/CV"
 
 ## 💼 Work Experiences
 
-### Basistek - (2 Year 8 Months)
-- **Jr. DevOps Engineer** *(June 2024 – Present)* 
+### Basistek - (3 Year 2 Months)
+- **Jr. DevOps Engineer** *(June 2024 – October 2025)* 
     - Set up, configure, and maintain on-premise Kubernetes environments for customers.
 - **Part-Time Jr. DevOps Engineer** *(September 2022 – June 2024)* 
     - Maintained Kubernetes clusters and optimized infrastructure deployment.
@@ -76,7 +76,10 @@ A secure, self-hosted password management system was implemented using Passbolt,
 ---
 
 ## 👤 References
-
+- **Emre Ünal**
+  *DevOps Team Lead, Basistek*
+  📧 [emre.unal@basistek.com](mailto:emre.unal@basistek.com)
+  
 - **Burak Kayrancıoğlu**  
   *DevOps Engineer, Trendyol*  
   📧 [bkayranci@gmail.com](mailto:bkayranci@gmail.com) 
