@@ -104,6 +104,13 @@ nav:
 
 
 extra:
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: Türkçe
+      link: /tr/
+      lang: tr
   social:
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/ruchany13
